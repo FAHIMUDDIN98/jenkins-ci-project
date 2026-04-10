@@ -15,19 +15,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean compile'
+                bat 'mvn clean install'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'mvn test'
-            }
-        }
-
-        stage('Test Report') {
-            steps {
-                junit 'target/surefire-reports/*.xml'
+                bat 'mvn test'
             }
         }
     }
