@@ -1,0 +1,273 @@
+{
+	"id": "fcf2f8ba-c9e8-4906-9095-4a40b35ec3c2",
+	"name": "Automated API Testing for User Authentication",
+	"timestamp": "2026-03-26T16:42:57.223Z",
+	"collection_id": "38044217-779deac9-dfd9-44c7-ad16-2e1f60eadb65",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 29,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-03-26T16:42:48.070Z",
+	"totalFail": 7,
+	"results": [
+		{
+			"id": "1ddab1e2-ac5f-4544-9529-ec5ded68cf59",
+			"name": "Test Case 1 - Valid Login",
+			"url": "https://reqres.in/api/login",
+			"time": 256,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status is 200": true,
+				"Response has token": true
+			},
+			"testPassFailCounts": {
+				"Status is 200": {
+					"pass": 4,
+					"fail": 0
+				},
+				"Response has token": {
+					"pass": 4,
+					"fail": 0
+				}
+			},
+			"times": [
+				1522,
+				291,
+				201,
+				256
+			],
+			"allTests": [
+				{
+					"Status is 200": true,
+					"Response has token": true
+				},
+				{
+					"Status is 200": true,
+					"Response has token": true
+				},
+				{
+					"Status is 200": true,
+					"Response has token": true
+				},
+				{
+					"Status is 200": true,
+					"Response has token": true
+				}
+			]
+		},
+		{
+			"id": "eadd16f2-3b0f-4c12-9ea6-3ab9c8f357fe",
+			"name": "Test Case 2: Invalid Login",
+			"url": "https://reqres.in/api/login",
+			"time": 234,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status is 400": true,
+				"Error: invalid credentials": false
+			},
+			"testPassFailCounts": {
+				"Status is 400": {
+					"pass": 4,
+					"fail": 0
+				},
+				"Error: invalid credentials": {
+					"pass": 0,
+					"fail": 4
+				}
+			},
+			"times": [
+				235,
+				198,
+				199,
+				234
+			],
+			"allTests": [
+				{
+					"Status is 400": true,
+					"Error: invalid credentials": false
+				},
+				{
+					"Status is 400": true,
+					"Error: invalid credentials": false
+				},
+				{
+					"Status is 400": true,
+					"Error: invalid credentials": false
+				},
+				{
+					"Status is 400": true,
+					"Error: invalid credentials": false
+				}
+			]
+		},
+		{
+			"id": "8cb90688-98bf-4636-8a99-afa36e6168bf",
+			"name": "Test Case 3: Missing Password",
+			"url": "https://reqres.in/api/login",
+			"time": 238,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status is 400": true,
+				"Error: Missing password": true
+			},
+			"testPassFailCounts": {
+				"Status is 400": {
+					"pass": 4,
+					"fail": 0
+				},
+				"Error: Missing password": {
+					"pass": 4,
+					"fail": 0
+				}
+			},
+			"times": [
+				474,
+				265,
+				246,
+				238
+			],
+			"allTests": [
+				{
+					"Status is 400": true,
+					"Error: Missing password": true
+				},
+				{
+					"Status is 400": true,
+					"Error: Missing password": true
+				},
+				{
+					"Status is 400": true,
+					"Error: Missing password": true
+				},
+				{
+					"Status is 400": true,
+					"Error: Missing password": true
+				}
+			]
+		},
+		{
+			"id": "a71c0d15-0cdf-4a02-9858-6699d28fb918",
+			"name": "Test Case 4: Missing Email",
+			"url": "https://reqres.in/api/login",
+			"time": 265,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status is 400": true,
+				"Error: Missing email": true
+			},
+			"testPassFailCounts": {
+				"Status is 400": {
+					"pass": 4,
+					"fail": 0
+				},
+				"Error: Missing email": {
+					"pass": 4,
+					"fail": 0
+				}
+			},
+			"times": [
+				310,
+				232,
+				167,
+				265
+			],
+			"allTests": [
+				{
+					"Status is 400": true,
+					"Error: Missing email": true
+				},
+				{
+					"Status is 400": true,
+					"Error: Missing email": true
+				},
+				{
+					"Status is 400": true,
+					"Error: Missing email": true
+				},
+				{
+					"Status is 400": true,
+					"Error: Missing email": true
+				}
+			]
+		},
+		{
+			"id": "e800cc17-ab53-4bd5-8283-d3d2f7625fa7",
+			"name": "Data Driven Testing-Login",
+			"url": "https://reqres.in/api/login",
+			"time": 254,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"status should be 200": false
+			},
+			"testPassFailCounts": {
+				"status should be 200": {
+					"pass": 1,
+					"fail": 3
+				}
+			},
+			"times": [
+				199,
+				243,
+				223,
+				254
+			],
+			"allTests": [
+				{
+					"status should be 200": true
+				},
+				{
+					"status should be 200": false
+				},
+				{
+					"status should be 200": false
+				},
+				{
+					"status should be 200": false
+				}
+			]
+		}
+	],
+	"count": 4,
+	"totalTime": 6252,
+	"collection": {
+		"requests": [
+			{
+				"id": "1ddab1e2-ac5f-4544-9529-ec5ded68cf59",
+				"method": "POST"
+			},
+			{
+				"id": "eadd16f2-3b0f-4c12-9ea6-3ab9c8f357fe",
+				"method": "POST"
+			},
+			{
+				"id": "8cb90688-98bf-4636-8a99-afa36e6168bf",
+				"method": "POST"
+			},
+			{
+				"id": "a71c0d15-0cdf-4a02-9858-6699d28fb918",
+				"method": "POST"
+			},
+			{
+				"id": "e800cc17-ab53-4bd5-8283-d3d2f7625fa7",
+				"method": "POST"
+			}
+		]
+	}
+}
